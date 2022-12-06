@@ -1,0 +1,18 @@
+function getPromise(){
+  return new Promise(function(resolve,reject){
+    setTimeout(function(){
+      resolve({'country' : 'INDIA'});
+    },2000)
+  })
+}
+
+async function getResult(){
+  let result = await getPromise();
+  return result
+}
+
+async function doTask(){
+  let data = await getResult();
+  console.log(data)
+}
+doTask();
