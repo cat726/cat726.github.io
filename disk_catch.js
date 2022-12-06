@@ -1,7 +1,7 @@
 function getPromise(){
   return new Promise(function(resolve,reject){
     setTimeout(function(){
-      resolve({'country' : 'INDIA'});
+      resolve({'country' : 'asdcf'});
     },2000)
   })
 }
@@ -15,4 +15,5 @@ async function doTask(){
   let data = await getResult();
   console.log(data)
 }
+
 doTask();
